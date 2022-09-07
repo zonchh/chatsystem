@@ -16,7 +16,7 @@ module.exports = function(app, path) {
             try {
                 var data = JSON.parse(jsonString);
                 for (i = 0; i < data.length; i++) {
-                    if (user.username === data[i].userName) {
+                    if (user.username === data[i].username) {
                         user.valid = true;
                         user.role = data[i].role;
                         user.email = data[i].email;
@@ -48,7 +48,7 @@ module.exports = function(app, path) {
             try {
                 var data = JSON.parse(jsonString);
                 for(i = 0; i < data.length; i++) {
-                    console.log(data[i].userName);
+                    console.log(data[i].username);
                     if(user.username === data[i].username) {
                         console.log("User Already Exists");
                         valid = false;

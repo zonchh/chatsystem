@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   inputPassword = "";
   error: any;
 
+
   constructor(private router: Router, private loginService: LoginService) { }
   ngOnInit(): void {
   }
@@ -23,6 +24,8 @@ export class LoginComponent implements OnInit {
       console.log(data);
       if (data.valid === true) {
         localStorage.setItem('username', JSON.stringify(data.username));
+        localStorage.setItem('email', JSON.stringify(data.email));
+        localStorage.setItem('role', JSON.stringify(data.role));
         this.router.navigateByUrl("/account");
 
       } else if (data.valid === false) {
@@ -34,3 +37,4 @@ export class LoginComponent implements OnInit {
   }
 
 }
+

@@ -13,11 +13,14 @@ export class SettingsComponent implements OnInit {
   inputEmail = "";
   inputRole = "";
   error: any;
+  getRole = localStorage.getItem('role');
+  role = this.getRole?.replace(/['"]+/g, '');
 
   constructor(private router: Router, private loginService: LoginService) { }
 
-  ngOnInit(): void {
-  }
+
+  ngOnInit() {
+  } 
 
   clickAddUser() {
     this.loginService.addUser(this.inputUsername, this.inputEmail, this.inputRole).subscribe(data => {
@@ -29,5 +32,7 @@ export class SettingsComponent implements OnInit {
       this.ngOnInit();
     })
   }
+
+
 
 }

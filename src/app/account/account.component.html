@@ -1,11 +1,14 @@
-<p>ACCOUNT WORKS</p>
+<ng-container *ngIf="username">
+    <h1>Welcome {{username}}</h1>
+    <p>You are an authenticated user</p>
+    <a routerLink = "/settings">Settings</a>
 
-<a routerLink = "/settings">Settings</a>
+    <form>
+        <button class = "logout" (click)="logout()">Logout</button>
+    </form>
+</ng-container>
 
-<form>
-    <button class = "logout" (click)="logout()">Logout</button>
-</form>
-
-<div *ngIf="userLoggedIn">
-
-</div>
+<ng-container *ngIf="!username">
+    <h3>You are not logged in</h3>
+    <a routerLink = "/login">Login</a>
+</ng-container>

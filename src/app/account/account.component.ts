@@ -9,16 +9,20 @@ import { LoginService } from '../login.service';
 })
 export class AccountComponent implements OnInit {
 
+  getUsername = localStorage.getItem('username')
+  username = this.getUsername?.replace(/['"]+/g, '');
+
   constructor(private router: Router, private loginService: LoginService) { }
 
-  userLoggedIn: boolean = false;
 
   ngOnInit(): void {
   }
 
+  
   logout() {
     localStorage.setItem('username', '');
+    localStorage.setItem('email', '');
+    localStorage.setItem('role', '');
     this.router.navigateByUrl("/");
   }
-
 }
