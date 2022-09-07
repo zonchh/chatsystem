@@ -11,12 +11,15 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/../chat/dist/chat'));
+var path = require('path');
+
+app.use(express.static(__dirname + './../dist/chat'));
 console.log(__dirname);
 
 var http = require('http').Server(app);
 var server = http.listen(3000, function() {
     console.log('Server listening in port: 3000...')
-})
+});
 
 // endpoints
+app.post('/api/login', require('./routes/api'));
