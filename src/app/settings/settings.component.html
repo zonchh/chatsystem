@@ -4,17 +4,17 @@
     <h4>Add a User</h4>
     <form>
 
-        <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" [(ngModel)]="inputUsername" name="inputUsername">
+        <div class="form-outline mb-4">
+            <label class="form-label "for="form2Example1">Username</label>
+            <input type="text" placeholder="Enter Username" class="form-control" [(ngModel)]="inputUsername" name="inputUsername">
 
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" [(ngModel)]="inputEmail" name="inputEmail">
+            <label class="form-label "for="form2Example1">Email</label>
+            <input type="text" placeholder="Enter Email" class="form-control" [(ngModel)]="inputEmail" name="inputEmail">
 
-            <label for="role"><b>Role</b></label>
-            <input type="text" placeholder="Enter Role" [(ngModel)]="inputRole" name="inputRole">
+            <label class="form-label "for="form2Example1">Role</label>
+            <input type="text" placeholder="Enter Role" class="form-control" [(ngModel)]="inputRole" name="inputRole">
 
-            <button (click)="clickAddUser()">Add User</button>
+            <button class="btn btn-primary" (click)="clickAddUser()">Add User</button>
 
             {{error}}
 
@@ -25,11 +25,11 @@
     <h4>Remove a User</h4>
     <form>
 
-        <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" [(ngModel)]="deleteUsername" name="inputUsername">
+        <div class="form-outline mb-4">
+            <label class="form-label "for="form2Example1">Username</label>
+            <input type="text" placeholder="Enter Username" class="form-control" [(ngModel)]="deleteUsername" name="inputUsername">
 
-            <button (click)="clickDeleteUser()">Remove User</button>
+            <button class="btn btn-primary" (click)="clickDeleteUser()">Remove User</button>
 
             {{error}}
 
