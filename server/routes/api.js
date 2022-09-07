@@ -2,6 +2,7 @@ var fs = require('fs');
 
 module.exports = function(app, path) {
 
+    // for matching credentials (logging in)
     app.post("/api/login", function(req, res) {
         fs.readFile("G:/Uni/Year 4 Tri 2/Software Frameworks/Assignment/chat/server/data/users.json", "utf-8", (err, jsonString) => {
             var user = {};
@@ -33,6 +34,7 @@ module.exports = function(app, path) {
         });
     });
 
+    // for adding a user
     app.post("/api/addUser", function (req, res) {
         fs.readFile("G:/Uni/Year 4 Tri 2/Software Frameworks/Assignment/chat/server/data/users.json", "utf-8", (err, jsonString) => {
             var user = {};
@@ -80,6 +82,7 @@ module.exports = function(app, path) {
         });
     });
 
+    // for deleting a user
     app.post("/api/deleteUser", function (req, res) {
         fs.readFile("G:/Uni/Year 4 Tri 2/Software Frameworks/Assignment/chat/server/data/users.json", "utf-8", (err, jsonString) => {
         deleteUsername = req.body.deleteUsername;
