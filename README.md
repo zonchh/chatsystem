@@ -4,7 +4,7 @@
 My name is Zachery Ladisla and this is my github repository for 3813ICT Assignment where we are tasked with developing a chat system. This github project uses Angular to serve as the front end of the web app and uses Nodejs as the back-end to make a REST API. Github is used as version control as it offers the ability to keep track of progress with commits and to backtrack on previous version of the project if necessary. As Angular and Nodejs are being used together, they have been separated from each other in folders in order to easily manage either end. The Nodejs server is kept within the server folder which is found in the root of the project. 
 
 ## Data
-The data relevant for this project are the list of users and groups/channels. This data is stored inside a json file within the server folder as it allows the API to easily send data to the front-end.
+The data relevant for this project are the list of users and groups/channels. This data is stored inside a json file within the server folder as it allows the API to easily send data to the front-end. In the list of users, each user has a username, email, and role. While the list of groups, each group has a groupname and a list of channels.
 
 ## REST API
 The REST API requires multiple npm packages for it to fully communicate with the front-end. Express is a web framework made for node, the CORS (Cross-Origin Resource Sharing) package is a middleware that allows a server to call/restrict resources where a HTTP request was initiated. There a series of routes that utilises the existing data as well as user input to provide features on the web app. This is done through routes. 
