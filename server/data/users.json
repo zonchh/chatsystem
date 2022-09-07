@@ -1,1 +1,1 @@
-[{"username":"zach","email":"zladisla@gmail.com","role":"superadmin"},{"username":"bob","email":"bob@gmail.com","role":"groupadmin"},{"username":"lou","email":"lou@gmail.com","role":"user"}]
+{"users":[{"username":"zach","email":"zladisla@gmail.com","role":"superadmin"},{"username":"bob","email":"bob@gmail.com","role":"groupadmin"}],"groups":[{"groupname":"Science","channel":["Chemistry","Physics","Biology"]}]}

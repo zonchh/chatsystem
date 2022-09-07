@@ -30,6 +30,10 @@ export class LoginService {
   addUser(inputUsername: string, inputEmail: string, inputRole: string) {
     return this.http.post(this.url + "/api/addUser", {inputUsername, inputEmail, inputRole})
   }
+
+  deleteUser(deleteUsername: string) {
+    return this.http.post(this.url + "/api/deleteUser", {deleteUsername})
+  }
 }
 
 

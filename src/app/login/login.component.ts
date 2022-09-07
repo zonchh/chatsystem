@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   inputUsername = "";
   inputPassword = "";
   error: any;
-
+  getUsername = localStorage.getItem('username')
+  username = this.getUsername?.replace(/['"]+/g, '');
 
   constructor(private router: Router, private loginService: LoginService) { }
   ngOnInit(): void {

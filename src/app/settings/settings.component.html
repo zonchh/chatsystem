@@ -14,7 +14,22 @@
             <label for="role"><b>Role</b></label>
             <input type="text" placeholder="Enter Role" [(ngModel)]="inputRole" name="inputRole">
 
-            <button (click)="clickAddUser()">submit</button>
+            <button (click)="clickAddUser()">Add User</button>
+
+            {{error}}
+
+        </div>
+        
+    </form>
+
+    <h4>Remove a User</h4>
+    <form>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" [(ngModel)]="deleteUsername" name="inputUsername">
+
+            <button (click)="clickDeleteUser()">Remove User</button>
 
             {{error}}
 

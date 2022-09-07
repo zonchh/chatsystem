@@ -12,6 +12,7 @@ export class SettingsComponent implements OnInit {
   inputUsername = "";
   inputEmail = "";
   inputRole = "";
+  deleteUsername = "";
   error: any;
   getRole = localStorage.getItem('role');
   role = this.getRole?.replace(/['"]+/g, '');
@@ -30,6 +31,15 @@ export class SettingsComponent implements OnInit {
         alert("User Added");
       }
       this.ngOnInit();
+    })
+  }
+
+  clickDeleteUser() {
+    this.loginService.deleteUser(this.deleteUsername).subscribe(data => {
+      if(data === true) {
+        alert("User Deleted");
+        this.ngOnInit();
+      }
     })
   }
 

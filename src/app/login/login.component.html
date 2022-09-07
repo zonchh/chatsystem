@@ -1,17 +1,24 @@
-<form>
+<ng-container *ngIf="username">
+    <h1>Welcome {{username}}</h1>
+    <p>You are already logged in</p>
+</ng-container>
 
-    <div class="form-outline mb-4">
-        <input type="text" class="form-control" [(ngModel)]="inputUsername" name="inputUsername">
-        <label class="form-label "for="form2Example1">Username</label>
-    </div>
-    
-    <div class="form-outline mb-4">
-        <input type="password" class="form-control" [(ngModel)]="inputPassword" name="inputPassword">
-        <label class="form-label" for="form2Example1">Password</label>
-    </div>
+<ng-container *ngIf="!username">
+    <form>
 
-    <button type="button" class="btn btn-primary btn-block mb-4" (click)="itemClicked()">Sign In</button>
+        <div class="form-outline mb-4">
+            <input type="text" class="form-control" [(ngModel)]="inputUsername" name="inputUsername">
+            <label class="form-label "for="form2Example1">Username</label>
+        </div>
+        
+        <div class="form-outline mb-4">
+            <input type="password" class="form-control" [(ngModel)]="inputPassword" name="inputPassword">
+            <label class="form-label" for="form2Example1">Password</label>
+        </div>
 
-        {{error}}
-</form>
+        <button type="button" class="btn btn-primary btn-block mb-4" (click)="itemClicked()">Sign In</button>
+
+            {{error}}
+    </form>
+</ng-container>
   
