@@ -17,3 +17,6 @@ The REST API requires multiple npm packages for it to fully communicate with the
 
 ## Angular Architecture 
 For this project, I generated 3 components which serve as the views for the web app which are login, account, and settings. They are all linked together to allow templating so that every page redirect doesn't have to render an entire new page of html. I then generated a service named login. This contains the User and Group interface as well as the HTTP methods for the routes.
+
+### Link to GitHub Repository
+https://github.com/zonchh/chatsystem
