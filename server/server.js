@@ -22,4 +22,4 @@ var server = http.listen(3000, function() {
 });
 
 // endpoints
-app.post('/api/login', require('./routes/api'));
+require("./routes/api.js")(app, path);

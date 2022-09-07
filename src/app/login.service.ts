@@ -26,6 +26,10 @@ export class LoginService {
   login(inputUsername: string, inputPassword: string) {
     return this.http.post<User>(this.url + "/api/login", {inputUsername, inputPassword})
   }
+
+  addUser(inputUsername: string, inputEmail: string, inputRole: string) {
+    return this.http.post(this.url + "/api/addUser", {inputUsername, inputEmail, inputRole})
+  }
 }
 
 

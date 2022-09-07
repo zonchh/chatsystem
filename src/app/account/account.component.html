@@ -1,1 +1,11 @@
-<p>account works!</p>
+<p>ACCOUNT WORKS</p>
+
+<a routerLink = "/settings">Settings</a>
+
+<form>
+    <button class = "logout" (click)="logout()">Logout</button>
+</form>
+
+<div *ngIf="userLoggedIn">
+
+</div>
