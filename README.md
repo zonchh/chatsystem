@@ -11,7 +11,7 @@ The REST API requires multiple npm packages for it to fully communicate with the
 
 | Route | Parameters | Return Value | What it does |
 | ----- | -----------| -------------| -------------|
-| /api/login | InputUsername, Input Password | Valid Username | This route matches the user input on the front-end with existing user data. As user authentication isn't yet necessary, this route only matches a users InputUsername with the username stored in the json file. |
+| /api/login | InputUsername, Input Password | Valid Username | This route matches the user input on the front-end with existing user data. As user authentication isn't yet necessary, this route only matches a users InputUsername with the username stored in the json file. When a user is logged in, their information is stored locally using localStorage. This allows the web application remember the details of the user logged in until they log out. |
 | /api/addUser | InputUsername, InputEmail, InputRole | Valid entry of all parameters | This route requests the InputUsername, InputEmail and InputRole from the front-end and pushes the parameters to the list of existing users in the json file. |
 | /api/deleteUser | InputUsername | Boolean | This route takes the InputUsername from the front-end and looks through the block of data from the json file until it finds a matching username and deletes it from the json file.
 
