@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ChatComponent } from './chat/chat.component';
+import { SocketService } from './socket.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { ChatComponent } from './chat/chat.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
