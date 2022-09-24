@@ -1,3 +1,5 @@
+const PORT = 3000;
+
 // express
 var express = require('express');
 var app = express();
@@ -13,13 +15,23 @@ app.use(bodyParser.json());
 
 var path = require('path');
 
+var http = require('http').Server(app);
+
+var io = require('socket.io')(http, {
+    cors: {
+        origin: "http://localhost: 3000",
+        methods: ["GET", "POST"]
+    }
+});
+
 app.use(express.static(__dirname + './../dist/chat'));
 console.log(__dirname);
 
-var http = require('http').Server(app);
-var server = http.listen(3000, function() {
-    console.log('Server listening in port: 3000...')
-});
-
 // endpoints
 require("./routes/api.js")(app, path);
+const server = require('./listen');
+const sockets = require('./sockets');
+
+sockets.connect(io, PORT);
+
+server.listen(http, PORT);

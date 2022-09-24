@@ -19,7 +19,6 @@ export class SettingsComponent implements OnInit {
 
   constructor(private router: Router, private loginService: LoginService) { }
 
-
   ngOnInit() {
   } 
 
@@ -30,7 +29,6 @@ export class SettingsComponent implements OnInit {
       } else if(data === true) {
         alert("User Added");
       }
-      this.ngOnInit();
     })
   }
 
@@ -38,7 +36,6 @@ export class SettingsComponent implements OnInit {
     this.loginService.deleteUser(this.deleteUsername).subscribe(data => {
       if(data === true) {
         alert("User Deleted");
-        this.ngOnInit();
       }
     })
   }

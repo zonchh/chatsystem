@@ -65,7 +65,6 @@ module.exports = function(app, path) {
                     saveFile();
                 }
 
-                data.users.push(user);
                 function saveFile() {
                     var entry = JSON.stringify(data);
                     fs.writeFile("G:/Uni/Year 4 Tri 2/Software Frameworks/Assignment/chat/server/data/users.json", entry, function(err) {
