@@ -2,7 +2,12 @@
     <h1>Welcome {{username}}</h1>
     <p>You are an authenticated user</p>
     <h3>Groups</h3>
-    <a routerLink = "/settings">Settings</a>
+    <div>
+        <a routerLink = "/chat">Groups</a>
+    </div>
+    <div>
+        <a routerLink = "/settings">Settings</a>
+    </div>
 
     <form>
         <button class="btn btn-primary" (click)="logout()">Logout</button>

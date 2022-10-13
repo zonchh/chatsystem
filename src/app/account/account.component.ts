@@ -14,15 +14,14 @@ export class AccountComponent implements OnInit {
 
   constructor(private router: Router, private loginService: LoginService) { }
 
-
   ngOnInit(): void {
   }
 
-  
+  // logout -> clear localStorage, redirect to login page
   logout() {
     localStorage.setItem('username', '');
     localStorage.setItem('email', '');
     localStorage.setItem('role', '');
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/login");
   }
 }

@@ -1,1 +1,41 @@
-<p>chat works!</p>
+<div class="container homecontainer">
+    <p class="title">Welcome {{username}}</p>
+    
+    <h3>Pick a Group</h3>
+    <div class="tabs">
+        <ul>
+            <li *ngFor="let group of groups" [value]="group.name" (click)="selectGroup(group.name)"><a>{{group.name}}</a></li>
+        </ul>
+    </div>
+    <div *ngIf="selectedGroup">
+    <h3>Pick a Channel</h3>
+    <div class="tabs">
+        <ul>
+            <li *ngFor="let channel of selectedGroupChannels" [value]="channel" (click)="chosenChannel(channel)"><a>{{channel}}</a></li>
+        </ul>
+    </div>
+    </div>
+    
+    <div class="chat" *ngIf="selectedChannel">
+        <h4>Chat: {{selectedChannel}}</h4>
+        <div class="newmessage">
+            <form method="post">
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="messagecontent">Chat Message</label>
+                    <input type="text" placeholder="Enter Message" class="form-control" id="messagecontent" [(ngModel)]="messagecontent" name="messagecontent">
+                    <button class="btn btn-primary" (click)="chat()">Send Message</button>
+        
+                </div>
+        
+        
+            </form>
+        </div>
+        <h5>Messages:</h5>
+        <div class = "messages">
+            <li *ngFor="let m of messages">{{m}}</li>
+        </div>
+        
+    </div>
+    
+    
+</div>

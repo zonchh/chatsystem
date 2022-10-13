@@ -17,7 +17,7 @@ import { SocketService } from './socket.service';
     LoginComponent,
     AccountComponent,
     SettingsComponent,
-    ChatComponent
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
