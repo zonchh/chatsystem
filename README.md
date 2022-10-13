@@ -15,12 +15,10 @@ The data used throughout this project is stored within a MongoDB database. The d
 ### Users
 The "users" data is what represents a user in the web app. Users have a Username, Password, Email, Role, and their List of Groups.
 Below is an example of a record of 'users' data in the database.
-![Users](/chat/users.PNG)
 
 ### Groups
 The 'groups' data represents the possible groups and channels that a user can be a part of. A record in 'groups' will have a Name, a list of Channels, and a list of Group Assistants.
 Below is an example of a record of 'groups' data in the database.
-![Groups](/chat/groups.PNG)
 
 ## REST API
 The REST API requires multiple npm packages for it to fully communicate with the front-end. Express is a web framework made for node, the CORS (Cross-Origin Resource Sharing) package is a middleware that allows a server to call/restrict resources where a HTTP request was initiated. There a series of routes that utilises the existing data as well as user input to provide features on the web app. This is done through routes. 
